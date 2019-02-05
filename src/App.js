@@ -1,27 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+
 
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+
+   //*** */adjust min and max to change numbers calculated
+    let min = 1;
+    let max = 1000;
+
+    let total = 0;
+      for (let num = min; num < max; num++) {
+        total = total + num;
+    }
+ 
+  return (
+    <div className="App">
+      <p>Add numbers 1 through {max}</p>
+      <ul>Total is: {total}</ul>
+    </div>
+  );
   }
 }
 
